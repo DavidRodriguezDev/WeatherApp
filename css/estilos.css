@@ -61,8 +61,12 @@ h1, h3 {
 }
 
 .city-time h1 {
-    margin: 0 0 .2em 0;
     font-size: 3em;
+}
+
+.city-time h2 {
+    font-size: 1em;
+    padding: .4em 0;
 }
 
 .temp {
@@ -174,12 +178,5 @@ h1, h3 {
 
     html {
         font-size: 12px;
-    }
-}
-
-@media screen and (max-width: 300px) {
-
-    .weather-app {
-        min-height: 40em;
     }
 }

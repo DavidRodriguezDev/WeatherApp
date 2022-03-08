@@ -6,6 +6,7 @@ const dateOutput = document.querySelector(".date");
 const timeOutput = document.querySelector(".time");
 const conditionOutput = document.querySelector(".condition");
 const nameOutput = document.querySelector(".name");
+const countryOutput = document.querySelector(".country");
 const icon = document.querySelector(".icon");
 const cloudOutput = document.querySelector(".cloud");
 const humidityOutput = document.querySelector(".humidity");
@@ -33,7 +34,7 @@ function fetchWeatherData() {
 
         //Añadimos la temperatura y las condiciones meteorológicas
 
-        temp.innerHTML = data.current.temp_c + "&#176;"
+        temp.innerHTML = Math.round(data.current.temp_c) + "&#176;"  //Redondeo al número entero más cercano para evitar comas en la temperatura
         conditionOutput.innerHTML = data.current.condition.text;
 
         //Cogemos y extraemos la fecha y hora de la ciudad y la guardamos en diferentes variables.
@@ -53,6 +54,7 @@ function fetchWeatherData() {
         //Añadimos el nombre de la ciudad
 
         nameOutput.innerHTML = data.location.name;
+        countryOutput.innerHTML = data.location.country;
 
         //Cogemos el icono correspondiente
 
